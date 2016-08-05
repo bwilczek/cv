@@ -28,7 +28,7 @@
 		<div id="contactDetails" class="quickFade delayFour">
 			<ul>
 				<li>email: <a href="mailto:bwilczek@gmail.com" target="_blank">bwilczek@gmail.com</a></li>
-				<li>phone: +48 504 684 204</li>
+				<li>phone: +48 504 <span id="lastPhoneDigits" data-last="684 204" title="Click to display">XXX XXX</span></li>
 				<li><a href="https://github.com/bwilczek" target="_blank">github.com/bwilczek</a></li>
 			</ul>
 		</div>
@@ -78,8 +78,8 @@
 
 		<section>
 			<div class="sectionTitle">
-				<h1>Work Experience</h1>
-        <p class="subDetails">*highlights (<a href="javascript:void(null)" id="showCompleteWorkExperience">show all</a>)</p>
+				<h1>Work Experience*</h1>
+        <p class="subDetails">*highlights (<a href="javascript:void(null)" id="showCompleteWorkExperience">click to show all</a>)</p>
 			</div>
 
 			<div class="sectionContent">
@@ -110,7 +110,8 @@
         <article class="boring">
 					<h2>V&amp;V Test Team Lead at Silicon &amp; Software Systems</h2>
 					<p class="subDetails">April 2011 - November 2011</p>
-					<p> Introducing behaviour driven development and continuous integration to enterprise telehealth system. Tags: Selenium/WebDriver, Specflow, TeamCity, C#, MSTest, SVN, BugZilla,</p>
+					<p> Introducing behaviour driven development and continuous integration to enterprise telehealth system.
+            Tags: <code>Selenium/WebDriver</code>, <code>Specflow</code>, <code>TeamCity</code>, <code>C#</code>, <code>MSTest</code>, <code>SVN</code>, <code>BugZilla</code>,</p>
 				</article>
 
         <article>
@@ -119,7 +120,7 @@
 					<p>Defined quality aspect in software development processes: test strategy, test plans and test documentation.
 Set up development, integration and testing environments for penny auction website. Implemented tools
 for automated regression testing (<code>PHP</code>). Published few articles on http://qualityinagile.org/ Tags:
-<code>Scrum</code>, <code>Kanban</code>, <code>Confluence</code> <code>Jira+Wiki</code>, <code>virtualization</code> (VMWare)</code>, <code>Hudson</code>, <code>php5</code>, <code>phpunit</code>, <code>SVN</code>, <code>Selenium</code>.
+<code>Scrum</code>, <code>Kanban</code>, <code>Confluence</code> <code>Jira+Wiki</code>, <code>VMWare</code>, <code>Hudson</code>, <code>php5</code>, <code>phpunit</code>, <code>SVN</code>, <code>Selenium</code>.
           </p>
 				</article>
 
@@ -224,12 +225,12 @@ testing, <code>TDD</code>
         <article>
           <h2>Aviation</h2>
           <p class="subDetails">Private Pilot License</p>
-          <p>Flying around in two seater light aircrafts.</p>
+          <p>Flying around in two seater light aircrafts. Running flight school's <code>WordPress</code> powered <a href="http://www.aeroklub.wroc.pl" target="_blank">website</a></p>
         </article>
         <article>
           <h2>Music</h2>
           <p class="subDetails">Bass guitar</p>
-          <p>Used to play in a band called <a href="http://sonda.art.pl" target="_blank">Sonda</a>. Recently just playing for fun at home.</p>
+          <p>Used to play in a band called Sonda. Running band's <code>WordPress</code> powered <a href="http://sonda.art.pl" target="_blank">website</a></p>
         </article>
       </div>
       <div class="clear"></div>
@@ -241,8 +242,11 @@ testing, <code>TDD</code>
 <script language="javascript">
 
   $("#showCompleteWorkExperience").click(function() {
-    $(".boring").toggle();
-    // $("#showCompleteWorkExperience").text("hide");
+    $(".boring").show();
+  });
+
+  $("#lastPhoneDigits").click(function() {
+    $("#lastPhoneDigits").html($("#lastPhoneDigits").data('last'));
   });
 
 </script>
