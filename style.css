@@ -94,7 +94,7 @@ p {
 }
 
 a, a[href^=tel] {
-	color: #200;
+	color: #744;
 	text-decoration: none;
 	-webkit-transition: all .3s ease-in;
 	-moz-transition: all .3s ease-in;
